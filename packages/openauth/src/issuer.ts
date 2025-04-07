@@ -956,7 +956,7 @@ export function issuer<
 
       if (grantType === "client_credentials") {
         const provider = form.get("provider")?.toString(); 
-        if (!provider) 
+        if (!provider)
           return c.json({ error: "missing `provider` form value" }, 400)
         const match = input.providers[provider];
         if (!match) {
